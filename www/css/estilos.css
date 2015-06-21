@@ -1,0 +1,14 @@
+/*
+ * La cabecera de la pagina inicio.html
+ */
+.cabecera h1{
+    color: black;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.boton_descargar {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}

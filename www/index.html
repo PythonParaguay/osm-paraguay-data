@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>OSM Paraguay</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css" media="screen">
+
+    <!-- Versión compilada y comprimida del CSS de Bootstrap -->
+    <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css" media="screen">
+
+    <!-- Versión compilada y comprimida del JavaScript de Bootstrap -->
+    <script src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container cabecera">
+        <h1>OSM Paraguay</h1>
+    </div>
+    <div class="container">
+
+    </div>
+    <div class="container">
+        <!-- Mensaje explicativo -->
+        <div class="jumbotron">
+            <div class="container">
+                <p>
+                    Este sitio se realizó porque en la parte de descargas de <a href="http://download.geofabrik.de/south-america.html" target="_blank">GeoFabrik</a> no esta incluído Paraguay.
+                    <br>Un grupo de Python Paraguay quiso disponibilizar el mapa de Paraguay. :)
+                </p>
+            </div>
+        </div>
+        <div class="boton_descargar">
+            <button type="button" class="btn btn-primary btn-lg">
+                Descargar Paraguay
+            </button>
+        </div>
+        <br>
+        <!-- Codigo fuente -->
+        <div class="jumbotron">
+            <div class="container">
+                <p>
+                    Pasos realizados:
+                    <ol>
+                        <li>Descargar de Geofabrik la parte de <a href="http://download.geofabrik.de/south-america-latest.osm.pbf" target="_blank">Am&eacute;rica del sur</a></li>
+                        <li>Ejecutar en la terminal:
+                           <i>./osmconvert \
+                             /media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-latest.osm.pbf \
+                             -B=paraguay.poly \
+                             --out-pbf \
+                             -o=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-paraguay.osm.pbf \
+                             -t=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/osmconvert_tempfile.`date +"%s"`</i></li>
+                        <li><a href="http://www.mkgmap.org.uk/download/splitter.html" target="_blank">Splitter</a></li>
+                        <li>Crear un <a href="http://polygons.openstreetmap.fr/" target="_blank">polígono</a>. <a href="http://polygons.openstreetmap.fr/?id=287077" target="_blank">Paraguay</a></li>
+                        <li><a href="http://wiki.openstreetmap.org/wiki/Osmconvert" target="_blank">Cortar</a> un .osm mediante un .poly</li>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
