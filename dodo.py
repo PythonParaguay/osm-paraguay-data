@@ -59,7 +59,7 @@ def task_crop_data():
     def osmconvert_cmd():
         input_file = os.path.join(INPUT_DIR, 'data/south-america-latest.osm.pbf')
         poly_file = 'data/paraguay.poly'
-        return 'bin/osmconvert ' + input_file.replace(' ', '\ ')  + ' -B=' + poly_file + ' -o=%(targets)s'
+        return 'bin/osmconvert --hash-memory=400-50-2 ' + input_file.replace(' ', '\ ')  + ' -B=' + poly_file + ' -o=%(targets)s'
 
     return {
         'actions': [CmdAction(osmconvert_cmd)],
