@@ -43,3 +43,4 @@ http://mkaufmann.com.ar/~humitos/osm/south-america-paraguay.osm.pbf
 
 1. Make the automatic script more robust
 1. Run it weekly on the server to get an updated map
+1. Add Venezuela, Guyana and other missing in Geofabrik
