@@ -21,7 +21,7 @@ def task_download_osmconvert():
 
 def task_compile_osmconvert():
     def cc_cmd():
-        return 'cc -x c %(dependencies)s -lz -O3 -o osmconvert'
+        return 'cc -x c %(dependencies)s -lz -O3 -o %(targets)s'
 
     return {
         'actions': [CmdAction(cc_cmd)],
