@@ -1,46 +1,34 @@
-# OpenStreetMap data
+# OpenStreetMap Paraguay Data
 
-- Geofabrik.de: http://download.geofabrik.de/south-america-latest.osm.pbf
+We realized that one of the most used mirror of OpenStreetMap (Geofabrik) doesn't
+have the Paraguay map, so we created ourselves.
 
-- OpenStreetMap:
+The idea is to show them we exists and try to make/help them to
+include this map. It's the only one from South America that it's not
+included in their mirror and we don't know why.
 
-# osmconvert
+
+# Steps to create Paraguay map
+
+1. Download south-america.osm.pbf
+```
+wget -c http://download.geofabrik.de/south-america-latest.osm.pbf
+```
+
+1. Crop the map using the `paraguay.poly` file
 
 ```
 ./osmconvert \
-    /media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-latest.osm.pbf \
+    south-america-latest.osm.pbf \
 	-B=paraguay.poly \
 	--out-pbf \
-	-o=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-paraguay.osm.pbf \
-	-t=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/osmconvert_tempfile.`date +"%s"`
+	-o=south-america-paraguay.osm.pbf
 ```
 
-```
-./osmconvert \
-    /media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-paraguay.osm.pbf \
-	-o=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/south-america-paraguay.osm \
-	-t=/media/humitos/Seagate\ Expansion\ Drive/osm-data-extract/osmconvert_tempfile.`date +"%s"`
-```
+# How to get the `paraguay.poly` file
 
-# Splitter
-
-http://www.mkgmap.org.uk/download/splitter.html
-
-# Polígono de Paraguay
-
-http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format
-
-# Crear un polígono
+We use this website to get the `paraguay.poly` file:
 
 - http://polygons.openstreetmap.fr/
   - Paraguay: http://polygons.openstreetmap.fr/?id=287077
 
-- http://www.naturalearthdata.com/
-
-# Cortar un .osm mediante un .poly
-
-http://wiki.openstreetmap.org/wiki/Osmconvert
-
-# Información útil
-
-- Información técnica sobre geofabrik.de: http://download.geofabrik.de/technical.html
